@@ -49,11 +49,11 @@ export default class PipelineConstruct {
 
         blueprints.CodePipelineStack.builder()
             .name("blueprints-eks-pipeline")
-            .owner("aws-samples")
+            .owner("youngjeong46")
             .repository({
                 repoUrl: 'cdk-eks-blueprints-patterns',
                 credentialsSecretName: 'github-token',
-                targetRevision: 'main'
+                targetRevision: 'feature/cdk-2.x'
             })
             .stage({
                 id: 'us-west-1-managed-blueprints',
