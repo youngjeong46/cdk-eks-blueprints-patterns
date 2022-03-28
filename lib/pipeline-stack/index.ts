@@ -56,7 +56,7 @@ export default class PipelineConstruct {
                 targetRevision: 'feature/cdk-2.x'
             })
             .stage({
-                id: 'us-west-1-managed-blueprints',
+                id: 'usw1-managed',
                 stackBuilder: blueprint.clone('us-west-1')
             })
             .wave( {
@@ -67,7 +67,7 @@ export default class PipelineConstruct {
                 ]
             })
             .stage({
-                id: 'us-east-2-managed-blueprints',
+                id: 'use2-managed',
                 stackBuilder: blueprint.clone('us-east-2'),
                 stageProps: {
                     pre: [new blueprints.pipelines.cdkpipelines.ManualApprovalStep('manual-approval')]
